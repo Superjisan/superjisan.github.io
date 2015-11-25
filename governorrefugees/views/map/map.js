@@ -12,7 +12,7 @@ angular.module('map', ['ngRoute'])
   
 
 
-  $http.get("/data/governors.json", {cache: true})
+  $http.get("superjisan.com/governorrefugees/data/governors.json", {cache: true})
     .error(function(err){
       console.error(err);
     })
