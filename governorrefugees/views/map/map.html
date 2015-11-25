@@ -6,41 +6,49 @@
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-sm-8">
-			<div id="map"  style="width: 700px; height: 500px;"></div>
+			<div id="map"  style="width: 100%; height: 500px;"></div>
 		</div>
 		<div class="col-md-4 col-sm-4">
-			<h4 id="clicked-state"></h4>
-			<span class="addtocalendar atc-style-blue">
-		        <a class="atcb-link" tabindex="1" id="atc_btn_blue_link">Add to Calendar</a>
-		        <var class="atc_event">
-		            <var class="atc_date_start">2015-05-04 12:00:00</var>
-		            <var class="atc_date_end">2015-05-04 18:00:00</var>
-		            <var class="atc_timezone">Europe/London</var>
-		            <var class="atc_title">Star Wars Day Party</var>
-		            <var class="atc_description">May the force be with you</var>
-		            <var class="atc_location">Tatooine</var>
-		            <var class="atc_organizer">Luke Skywalker</var>
-		            <var class="atc_organizer_email">luke@starwars.com</var>
-		        </var>
-		        <ul class="atcb-list">
-		        	<li class="atcb-item">
-		        		<a id="atc_btn_blue_ical_link" class="atcb-item-link" href="https://addtocalendar.com/atc/ical?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">iCalendar
-		        		</a>
-	        		</li>
-	        		<li class="atcb-item">
-		        		<a id="atc_btn_blue_google_link" class="atcb-item-link" href="https://addtocalendar.com/atc/google?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=America%2FNew_York&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Google Calendar</a>
-	        		</li>
-	        		<li class="atcb-item">
-	        			<a id="atc_btn_blue_outlook_link" class="atcb-item-link" href="https://addtocalendar.com/atc/outlook?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Outlook</a>
-	        		</li>
-	        		<li class="atcb-item">
-	        			<a id="atc_btn_blue_outlookonline_link" class="atcb-item-link" href="https://addtocalendar.com/atc/outlookonline?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Outlook Online</a>
-	        		</li>
-	        		<li class="atcb-item">
-	        			<a id="atc_btn_blue_yahoo_link" class="atcb-item-link" href="https://addtocalendar.com/atc/yahoo?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Yahoo! Calendar</a>
-	        		</li>
-        		</ul>
-		    </span>
+			<div ng-if="selectedState">
+				<h3 id="clicked-state" >{{selectedState.Name}}</h3>
+				<h4 ng-if="selectedState" ng-bind="'Governor ' + selectedState.Governor"></h4>
+				<img ng-src="{{selectedState.GovernorImg}}">
+				<p>Party : <span ng-bind="selectedState.Party"></span></p>
+				<p>Statement about Syrian Refugees : <span ng-bind="selectedState.Statement"></span></p>
+				<p>Year To Vote Next: <span ng-bind="selectedState.NextElectionDate"></span></p>
+
+				<span class="addtocalendar atc-style-blue">
+			        <a class="atcb-link" tabindex="1" id="atc_btn_blue_link">Add to Calendar</a>
+			        <var class="atc_event">
+			            <var class="atc_date_start">2015-05-04 12:00:00</var>
+			            <var class="atc_date_end">2015-05-04 18:00:00</var>
+			            <var class="atc_timezone">Europe/London</var>
+			            <var class="atc_title">Star Wars Day Party</var>
+			            <var class="atc_description">May the force be with you</var>
+			            <var class="atc_location">Tatooine</var>
+			            <var class="atc_organizer">Luke Skywalker</var>
+			            <var class="atc_organizer_email">luke@starwars.com</var>
+			        </var>
+			        <ul class="atcb-list">
+			        	<li class="atcb-item">
+			        		<a id="atc_btn_blue_ical_link" class="atcb-item-link" href="https://addtocalendar.com/atc/ical?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">iCalendar
+			        		</a>
+		        		</li>
+		        		<li class="atcb-item">
+			        		<a id="atc_btn_blue_google_link" class="atcb-item-link" href="https://addtocalendar.com/atc/google?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=America%2FNew_York&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Google Calendar</a>
+		        		</li>
+		        		<li class="atcb-item">
+		        			<a id="atc_btn_blue_outlook_link" class="atcb-item-link" href="https://addtocalendar.com/atc/outlook?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Outlook</a>
+		        		</li>
+		        		<li class="atcb-item">
+		        			<a id="atc_btn_blue_outlookonline_link" class="atcb-item-link" href="https://addtocalendar.com/atc/outlookonline?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Outlook Online</a>
+		        		</li>
+		        		<li class="atcb-item">
+		        			<a id="atc_btn_blue_yahoo_link" class="atcb-item-link" href="https://addtocalendar.com/atc/yahoo?utz=-300&amp;uln=en-US&amp;vjs=1.5&amp;e[0][date_start]=2015-05-04%2012%3A00%3A00&amp;e[0][date_end]=2015-05-04%2018%3A00%3A00&amp;e[0][timezone]=Europe%2FLondon&amp;e[0][title]=Star%20Wars%20Day%20Party&amp;e[0][description]=May%20the%20force%20be%20with%20you&amp;e[0][location]=Tatooine&amp;e[0][organizer]=Luke%20Skywalker&amp;e[0][organizer_email]=luke%40starwars.com" target="_blank">Yahoo! Calendar</a>
+		        		</li>
+	        		</ul>
+			    </span>
+			</div>
 		</div>
 	</div>
 </div>
