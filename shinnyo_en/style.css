@@ -1,0 +1,305 @@
+* { margin:0; padding:0; box-sizing:border-box;}
+
+body {
+	background-color: #DECCB8;
+	font-size: 18px;
+	color: black; 
+	
+}
+
+article {	
+	width: 60%;
+	padding: 2em;
+	margin:auto;
+}
+
+header {
+	/*position: relative;*/
+}
+
+label {
+	display: none;
+	text-align: center; 
+	background-color: #BAB4B8;
+	padding: 1em 3em;
+	text-decoration: none;
+	font-weight: 300; 
+	color: black;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+nav {
+	background-color: #BAB4B8;
+	margin: auto;
+	text-align: center;
+}
+
+
+p {
+	line-height: 1.5em; 
+	text-align: left;
+	margin: auto;
+	font-family: 'Playfair Display', serif;
+}
+
+footer {
+	background-color: #BAB4B8;
+	text-align: center;
+}
+
+
+a:visited
+	 {color: purple; 
+	 	background-color:transparent; 
+	 	text-decoration: none}
+
+a:hover 
+	{color: gray;
+		background-color: transparent;
+		text-decoration: none}
+
+ .clearfix:after{
+ 	visibility: hidden;
+ 	display: block;
+ 	content: ".";
+ 	clear: both;
+ 	height: 0;
+ 	font-size: 0;
+}
+
+.generaldescrip {
+	padding: 1em 0;
+	font-size: 1em;
+}
+
+.generaldescrip:first-of-type {
+ 	padding: 1em 0;
+ 	font-family: "Open Sans", Helvetica, sans-serif;
+ 	font-size: 1.4em;
+ 	font-weight: 300;
+ 	text-align: center;
+ }
+
+ .contact {
+ text-decoration: underline;
+	font-weight: 300; 
+	color: black;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	padding: .2em;
+	display: inline-block;
+	 }
+
+.navlinks {
+	text-decoration: none;
+	font-weight: 300; 
+	color: black;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	padding: 1em 2em;
+	display: inline-block;
+}
+
+#check{
+	display:none;
+}
+
+#district {
+	background: url('images/washdcskyline.png') no-repeat center center scroll;
+	/*position: relative;*/
+	/*width: 80%;*/
+	height: 10em;
+	background-size: contain;
+}
+
+#header_wrapper {
+	
+}
+
+.hero img{
+	margin: 0 auto;
+	display: block;
+}
+
+#hero {
+ 	background: url('images/shinnyoflowers.png') no-repeat center center scroll;
+ 	width: 70%;
+ 	height: 350px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	padding-top: 1000px;
+ }
+
+ #logo {
+	content: url('images/logo-small.png');
+	width:20%;
+	float: left;
+	display: block;
+	/*position: relative;*/
+	height: 10em;
+}
+
+#wrapper {
+	background-color: #DE996A;
+	width:80%;
+	margin: 0 auto;
+	/*position: relative;
+	overflow: auto;*/
+}
+
+@media only screen and (max-width: 1362px){
+	label {
+		display: block;
+	}
+
+	a:visited
+	 {color: purple; 
+	 	background-color:transparent; 
+	 	text-decoration: none}
+
+	a:hover 
+	{color: gray;
+		background-color: transparent;
+		text-decoration: none}
+
+	nav {
+		display:none;
+	}
+
+	.navlinks {
+		display: block;
+	}
+
+	#check:checked + nav{
+		display: block;
+	}
+}
+
+@media only screen and (max-width:1345px) {
+	article {
+		width: 90%;
+		padding: 0;
+		}
+	}
+
+@media only screen and (max-width:1309px) {
+	article {
+		width: 80%;
+	}
+}
+
+
+@media only screen and (max-width:980px) {
+	/*html, body {
+		height: 100%;
+	}*/
+
+	/*body{
+		
+	}*/
+
+	footer { 
+		position: absolute;
+		bottom: 0;
+		width:100%;
+	}
+
+	footer .navlinks{
+		display: inline-block;
+	}
+
+	article{
+		padding-top:275px;
+	}
+
+	#wrapper {
+		width: 100%;
+		/*position: relative;*/
+		/*padding-top: 100px;*/
+		/*overflow: hidden;*/
+	}
+
+	#header_wrapper {
+			/*position: relative;*/
+			width: 100%;
+		}
+
+	#hero {
+			display:none;
+		}
+	.generaldescrip:first-of-type {
+		/*margin-top: 200px;*/
+	}
+
+
+}
+
+@media only screen and (max-width:970px) {
+	html, body {
+		/*height: 100%;*/
+	}
+
+	article {
+		width: 50%;
+		padding-bottom: 15em;
+	}
+
+	#wrapper{
+		position: relative;
+	}
+}  
+
+@media only screen and (max-width:855px) {
+
+		/*article {
+			display: block;
+		}*/
+
+		#header_wrapper {
+			/*position: relative;*/
+			width: 100%;
+		}
+
+	}
+
+	@media only screen and (max-width:700px) {
+		#district {
+			width: 100%;
+		}
+
+		#logo {
+			display:none;
+		}
+
+	}
+
+
+@media only screen and (max-width:578px) {
+	.generaldescrip:first-of-type {
+		font-size: 1.2em;
+	}
+
+	.generaldescrip: {
+		padding: 0;
+		font-size: .8em;
+	}
+
+}
+
+@media only screen and (max-width:505px) {
+		footer.navlinks {
+			font-size: 1em;
+			text-transform: uppercase;
+			padding: 1em 2em;
+		}
+
+		.generaldescrip:first-of-type {
+			display:none;
+
+	}
+}
+
