@@ -1,0 +1,20 @@
+{
+  "name": "happybirthday",
+  "version": "0.0.1",
+  "description": "A Happy Birthday site for friends",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "http-server -a localhost -p 8000 -c-1"
+  },
+  "keywords": [
+    "happybirthday",
+    "angular"
+  ],
+  "author": "Jisan Zaman",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.8.5",
+    "karma": "^0.13.16"
+  }
+}

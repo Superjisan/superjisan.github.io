@@ -7,10 +7,6 @@ angular.module('map', ['ngRoute'])
    })
 }])
 .controller('MapController',['$scope', '$http', function($scope, $http){
-  console.log('its getting here');
-
-  
-
 
   $http.get("//superjisan.com/governorrefugees/data/governors.json", {cache: true})
     .error(function(err){
