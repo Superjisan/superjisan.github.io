@@ -1,0 +1,9 @@
+/******JISAN stylings*********/
+#title-name{
+	font-size: 3rem;
+}
+
+.image.fit img.avatar {
+    width: 16rem;
+    height: 17.5rem;
+}
