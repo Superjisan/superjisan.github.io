@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid birthdaycontainer">
+  <div class="row">
+    <div class="rockyplay"><i onclick="playRocky()" class="fa fa-play rockyfa"></i><i onclick="pauseRocky()" class="fa fa-pause rockyfapause hidden"></i></div>
+    <div class="col-md-12">
+      <h2 class="hbtext text-center">HAPPY <br/>BIRTHDAY<br/></h2>
+    </div>
+  </div>
+  <div class="pauseFireworks"><i onclick="fireworksPause()" class="fa fa-pause"></i><i onclick="fireworksPlay()" class="fa fa-play hidden"></i></div>
+  <div class="row">
+    <div data-ride="carousel" id="carousel-example-generic" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row choices">
+            <div class="col-sm-12 col-xs-12 md-12">
+              <h3 class="text-center">Choose Your Greeting</h3>
+            </div>
+            <div data-target="#carousel-example-generic" data-slide-to="1" class="col-md-4 col-sm-4 col-xs-12 greeting">
+              <div class="choice">
+                <div class="choiceTitle">Personal Video</div><img src="/images/personalmessage.png" class="personalthumb"/>
+              </div>
+            </div>
+            <div data-target="#carousel-example-generic" data-slide-to="2" class="col-md-4 col-sm-4 col-xs-12 quote">
+              <div class="choice">
+                <div class="choiceTitle">Inspirational Quote</div><img src="/images/quotes.jpg"/>
+              </div>
+            </div>
+            <div data-target="#carousel-example-generic" data-slide-to="3" class="col-md-4 col-sm-4 col-xs-12 randomVideo">
+              <div class="choice">
+                <div class="choiceTitle">Random Funny</div><img src="/images/randomnonsense.jpg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item personal">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <h1 class="hbtextpersonal">PERSONAL GREETING</h1>
+            </div>
+          </div>
+          <div class="row">
+            <iframe src="https://www.youtube.com/embed/U3_clrpC3jI?html5=1" allowfullscreen="allowfullscreen" frameborder="1" class="youtube"></iframe>
+          </div>
+          <div class="row">
+            <p class="personalmessage">
+              Happy Birthday ! <br/>I miss you and I hope you have the best day. <br/>Keep rockin' and keep in touch.<br/>Sincerely, Jisan
+            </p>
+          </div>
+        </div>
+        <div class="item quotes">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <h1 class="hbtext">Inspirational Quotes</h1>
+            </div>
+          </div>
+          <div class="row">
+            <article>
+              <blockquote>
+                <p>Rule #1 : It's going to be alright. There are really no other options.</p>
+                <footer>Jisan Zaman</footer>
+              </blockquote>
+            </article>
+          </div>
+          <div class="row">
+            <button onclick="quotetry()" class="btn btn-lg tryanother"><i class="fa fa-refresh"> Try Another</i></button>
+          </div>
+        </div>
+        <div class="item random">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <h1 class="hbtextpersonal">Hope you find this amusing</h1>
+            </div>
+          </div>
+          <div class="row randomContent">
+            <div class="video">
+              <iframe src="https://www.youtube.com/embed/TPXWZxtDooY?html5=1" class="youtube"></iframe>
+              <p class="snippet">The greatest rendition of holiday spirit I've ever seen.</p>
+            </div>
+            <div class="audio hidden">
+              <audio>
+                <source/>
+              </audio>
+              <p class="snippet"></p>
+            </div>
+            <div class="picture hidden"><img/>
+              <p class="snippet"></p>
+            </div>
+          </div>
+          <div class="row">
+            <button onclick="randomtry()" class="btn btn-lg tryanother"><i class="fa fa-refresh"> Try Another</i></button>
+          </div>
+        </div>
+      </div><a role="button" data-slide="prev" href="#carousel-example-generic" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a role="button" data-slide="next" href="#carousel-example-generic" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+    </div>
+  </div>
+</div>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+    <script src="./js/app.js"></script>
+    
+  </body>
+</html>
