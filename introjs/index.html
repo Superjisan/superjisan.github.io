@@ -176,12 +176,35 @@ c === b; // this is false because while they are similar they are not the same t
 </ul>
 
 <p> </p>
-</div></div></section><section data-id="e08aed941ae530b36c5bf645b21228b3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 72px; top: 18px; height: auto;" data-block-id="1ffc6b4d95d86df71a75de401bcab252"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+</div></div></section><section data-id="e08aed941ae530b36c5bf645b21228b3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 72px; top: 18px; height: auto;" data-block-id="1ffc6b4d95d86df71a75de401bcab252"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
 <h2>Conditional Statements (If/Else)</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 650px; left: 130px; top: 210px;" data-block-id="9a14d1faf2b989db8cc0c7a091cf05e6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
 <p style="text-align: left;">Sometimes you need to figure out a combination of logical operators and DO something with them. That's where if/else comes in.</p>
-</div></div></section><section data-id="848e80e6fcbabcbe0a1dbfc61cd68ef0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 72px; top: 27px; height: auto;" data-block-id="993269de65aff9a24ed9fc3fd994a198"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 408px; height: 177px; left: 205px; top: 426px;" data-block-id="e0a774fef59a0e1aaa41bca227df0efa"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>
+        if(something == true) {
+            //do something here
+        } else {
+            //do something else
+        }</code></pre></div></div></section><section data-id="2d3e06e3fb70d506a638fe3a7c854be9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 69px; top: 18px; height: auto;" data-block-id="66f96ec258095f47eeafea57df53d8d0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>IF/ELSE IF/ElSE</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 696px; left: 121px; top: 149px;" data-block-id="036feef66426f8195ef4949e45f9c624"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="text-align:left">If you have multiple conditions, you can use else if.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 737px; height: 249px; left: 80px; top: 266px;" data-block-id="5e18b385c5a36c3e0d515052e68e2c4e"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>        
+        var age = 20;
+        if (age &gt;= 35) {
+            console.log('You can vote AND hold any place in government!');
+        } else if (age &gt;= 25) {
+            console.log('You can vote AND run for the Senate!');
+        } else if (age &gt;= 18) {
+            console.log('You can vote!');
+        } else {
+            console.log('You can\'t vote, but you can 
+            still write your representatives.');
+        }</code></pre></div></div></section><section data-id="848e80e6fcbabcbe0a1dbfc61cd68ef0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 72px; top: 27px; height: auto;" data-block-id="993269de65aff9a24ed9fc3fd994a198"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
 <h2>Functions</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 132px;" data-block-id="55071adcc5310f713f96c571858f24ab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
@@ -232,7 +255,17 @@ function printAge(birthYear, currentYear){
     possibleAge2 = // your code here
 
     console.log('You are either ' + possibleAge + ' or ' + possibleAge2 + '.');
-}</code></pre></div></div></section><section data-id="c64d18a81561b828782a932bac6b5925"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9ac62f88a8221348aa51ab626398b541"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+}</code></pre></div></div></section><section data-id="ca8949101daefa8fd461c72d5a6491fb"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="054d9be3f39d1262e0c62222e139af29"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Exercise (If/Else)</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 280px; height: auto;" data-block-id="82fac12fbb97e9878b685e9854bd45e6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text">
+<ul>
+	<li><span style="font-size:1.0em">Write a function named assignGrade that:</span></li>
+	<li><span style="font-size:1.0em">takes 1 argument, a number score.</span></li>
+	<li><span style="font-size:1.0em">returns a grade for the score, either "A", "B", "C", "D", or "F".</span></li>
+	<li><span style="font-size:1.0em">Call that function for a few different scores and log the result to make sure it works.</span></li>
+</ul>
+</div></div></section><section data-id="c64d18a81561b828782a932bac6b5925"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9ac62f88a8221348aa51ab626398b541"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Loops</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 90px; top: 222px; height: auto;" data-block-id="0359a3bcfc33f9c745c92a842dc0a25d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
@@ -532,6 +565,16 @@ element.onclick = function (event) {
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 287px; height: auto;" data-block-id="9f520081f89fdc347cbcb773c36a63d2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle">
 <h2><a href="http://codepen.io/superjisan/pen/mPLErZ" target="_blank">http://codepen.io/superjisan/pen/mPLErZ</a></h2>
+</div></div></section><section data-id="017e80babf846066a3680665e99c0e0a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="246e7af129c38cfce69ae85585bf8e3c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Other Resources</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 264px; height: auto;" data-block-id="38948b29fa2fc07aa1bb69dec9c59d36"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text">
+<ul>
+	<li><a href="https://www.codecademy.com/learn/javascript" target="_blank">Code Academy JavaScript</a></li>
+	<li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
+	<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Mozilla Developer Network</a></li>
+	<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript is Sexy</a></li>
+</ul>
 </div></div></section>
 			</div>
 		</div>
