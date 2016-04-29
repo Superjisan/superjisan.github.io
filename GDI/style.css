@@ -1,0 +1,82 @@
+body{
+	color: red;
+  	color: black;
+  	color: blue;
+	font-size: 30px;
+	background-color: lightgrey;
+}
+
+
+h1{
+	font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    color: green;
+    font-family: "Open Sans", sans-serif;
+}
+
+.center{
+	text-align: center
+}
+
+.nostyle-li{
+	list-style: none;
+}
+
+/*President List*/
+.presidents{
+	font-style: italic;
+	color: green;
+}
+
+.president{
+	background-color: teal;
+}
+
+.presidents li{
+	list-style: none;
+}
+
+ul.presidents #current{
+	text-decoration:underline;
+}
+
+.president .color-red{
+	color: darkred;
+}
+
+.president a:hover{
+	color: pink;
+}
+
+.president a:visited{
+	color: black;
+}
+
+.president:focus{
+	color: aqua ;
+}
+
+.presidents li:nth-child (5){
+	background-color: purple;
+}
+
+ul.vpresidents{
+	font-style: normal;
+	color: #077373;
+}
+
+
+ul li{
+
+}
+
+img{
+	25px solid rgb(69, 19, 144)
+}
+
+.vpresidents p{
+	font-style: normal;
+	color: rgb(0, 180, 0);
+}
+
