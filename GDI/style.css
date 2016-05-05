@@ -1,9 +1,5 @@
 body{
-	color: red;
-  	color: black;
-  	color: blue;
-	font-size: 30px;
-	background-color: lightgrey;
+	
 }
 
 
@@ -29,54 +25,31 @@ h1{
 	color: green;
 }
 
-.president{
-	background-color: teal;
-}
-
 .presidents li{
-	list-style: none;
+	min-height: 250px;
+	border: 1px solid black;
+	clear: both;
 }
 
-ul.presidents #current{
-	text-decoration:underline;
-}
-
-.president .color-red{
-	color: darkred;
-}
-
-.president a:hover{
-	color: pink;
-}
-
-.president a:visited{
-	color: black;
-}
-
-.president:focus{
-	color: aqua ;
-}
-
-.presidents li:nth-child (5){
-	background-color: purple;
-}
-
-ul.vpresidents{
-	font-style: normal;
-	color: #077373;
+.presidents li:not(:last-child){
+	border-bottom-width: 0;
 }
 
 
-ul li{
-
+.presidents li .name, .presidents li .president-img{
+	float: left;
+	padding: 1rem;
 }
 
-img{
-	25px solid rgb(69, 19, 144)
+.presidents li .president-img{
+	padding: 1rem;
+    max-height: 215px;
 }
 
-.vpresidents p{
-	font-style: normal;
-	color: rgb(0, 180, 0);
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 580px){
+  	.presidents li {
+  		min-height: 275px;
+  	}
 }
-
