@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweet Form</title>
+    <style>
+      body{
+        background-color: rgb(245, 248, 250);
+      }
+      .tweetForm{
+        background-color: rgb(237,244,251);
+        padding: 1rem;
+        color: rgb(93, 145, 216);
+      }
+      .tweets{
+        border: 1px solid rgb(226, 231, 237);
+        padding: .5rem;
+      }
+
+      .tweet{
+        border: 1px solid rgb(226, 231, 237);
+      }
+
+      .username {
+        font-weight: bold;
+      }
+
+    </style>
+    <!-- this gets bootstrap's css -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class='row'>
+      <h2 class='text-center'>My Twitter</h2>
+    </div>
+    <div class='row'>
+      <div class='col-sm-4'>
+        <div class='tweetForm'>
+          <h3>Write Tweet Here</h3>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" name="user_name" type="text">  
+          </div>
+          <div>
+             <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message"></textarea> 
+          </div> 
+          <button type='submit' class='btn btn-primary' id='tweetSubmit'>Tweet</button>
+        </div>
+      </div>
+      <div class='col-sm-8'>
+        <div class="tweets" id='tweets'>
+          <h4>Tweets</h4>
+          <div class='tweet'>
+            <div class='username'>@jisanzaman</div>
+            <p class='tweet_text'>This is My First Tweet!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //set variables for storing tweets;
+    var tweetsArray = [];
+
+    var addTweetToDom = function(tweet){
+      //creates the tweet div
+      var tweetDiv = document.createElement('div');
+      tweetDiv.className = 'tweet';
+      
+      //creates the username div
+      var userNameDiv = document.createElement('div');
+      userNameDiv.className = 'username';
+      var userNameText = document.createTextNode('@' + tweet.username);
+      userNameDiv.appendChild(userNameText);
+
+      //creates the tweet_text paragraph
+      var tweetTextPar = document.createElement('p');
+      tweetTextPar.className = 'tweet_text';
+      var tweetText = document.createTextNode(tweet.msg);
+      tweetTextPar.appendChild(tweetText);
+
+      //puts the username div and the tweet_text paragraph in the tweet div
+      tweetDiv.appendChild(userNameDiv);
+      tweetDiv.appendChild(tweetTextPar);
+
+      //adds the tweet div to the dom
+      var tweetsDiv = document.getElementById('tweets');
+      tweetsDiv.appendChild(tweetDiv);
+    };
+
+    var clearTweetMessage = function(){
+      var msgInputElem = document.getElementById('msg');
+      msgInputElem.value = '';
+    }
+
+    //set js value for tweet id elem;
+    var tweetSubmitElem = document.getElementById('tweetSubmit');
+
+    //create a listener for tweet submit;
+    tweetSubmitElem.onclick = function(){
+      // collect the name and msg;
+      var name = document.getElementById('name').value;
+      var msg = document.getElementById('msg').value;
+
+      //create an object that contains both name and msg;
+      var tweet = {
+        username: name,
+        msg : msg
+      };
+
+      //add the tweet to the dom using addTweetToDom;
+      /**YOUR CODE HERE**/
+      addTweetToDom(tweet);
+      
+      //clear the tweet value using clearTweet function;
+      /**YOUR CODE HERE**/
+      clearTweetMessage();
+    };
+
+  </script>
+</body>
+</html>
