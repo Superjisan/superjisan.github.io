@@ -6,6 +6,6 @@ title = 'Start of something new'
 
 ## Introduction
 
-This is **bold** text, and this is *emphasized* text.
+Hey everyone
 
 Visit the [Hugo](https://gohugo.io) website!
